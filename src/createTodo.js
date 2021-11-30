@@ -7,29 +7,18 @@ class todoListObject {
         this.dueDate = dueDate;
         this.priority=priority;
         this.subTodo=subTodo;
-
     }
     
 }
 
-class subTodoListObject {
-    constructor(subtitle,subdescription,subdueDate,subpriority){
-        this.title=subtitle;
-        this.description=subdescription;
-        this.dueDate = subdueDate;
-        this.priority=subpriority;
 
 
-    }
-    
-}
+const cock = new todoListObject ("yeah","gang","gang","gang",'gang',)
+const projects = ["default"];
 
-const cock1 =new subTodoListObject ('sub','sub','sub','sub');
-
-const cock = new todoListObject ("gang","gang","gang","gang",cock1,)
-
-const todoList = [cock,cock,cock,cock];
+const todoList = [cock,cock,cock]; //array of todos containing array of subtodos in each todo
 
 export{todoListObject,
         todoList,
+        projects
         };

@@ -1,0 +1,152 @@
+.container {
+  height: 95vh;
+  border: blue double;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.titleDiv {
+  border: blue double;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+  width: 100%;
+}
+
+.mainDiv {
+  border: blue double;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  width: 100%;
+}
+
+.mainContainerDiv {
+  height: 100%;
+  border: blue double;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  flex-direction: column;
+}
+
+.sideContainerDiv {
+  border: blue double;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  width: 20%;
+  flex-direction: column;
+}
+
+.mainContent {
+  border: blue double;
+  height: 85%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5%;
+}
+
+.mainContentTitle {
+  border: blue double;
+  height: 15%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tab {
+  border: blue double;
+  height: 5%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50%;
+}
+
+.todo {
+  border: blue double;
+  height: 15%;
+  width: 15%;
+  margin-top: 5%;
+  margin-left: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.projectModal {
+  position: absolute;
+  margin: auto;
+  width: 20%;
+  height: 20%;
+  border: 3px solid green;
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15%;
+}
+
+.projectModalTitle {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projectModalInput {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projectModalOptions {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-direction: row;
+  height: 50%;
+  width: 75%;
+}
+
+.projectOptions {
+  border: blue double;
+  height: 30%;
+  display: flex;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+}
+
+.topDiv {
+  border: blue double;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  width: 100%;
+}
+
+.bottomDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  width: 10%;
+}

@@ -1,5 +1,7 @@
 import {todoListObject, todoList} from "./createTodo"
+import{mainPage,displayingTodos,eventClickFunctions} from "./DOM"
 
-console.trace(todoList);
+mainPage.sideContainerContent();
+displayingTodos.projectDivs();
 
 
