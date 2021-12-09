@@ -6,7 +6,9 @@ module.exports = {
   devtool: 'inline-source-map',
   output: {
     filename: 'bundle.js',
-    path: "/"
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: "/todo-list/",
+
   },
   externals: {
     jquery: 'jQuery'
