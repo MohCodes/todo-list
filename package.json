@@ -8,11 +8,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
     "build": "webpack",
-    "deploy": "gh-pages -d dist -b master"
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/moefarts/todo-list.git"
+    "url": "https://github.com/moefarts/todo-list.git"
   },
   "author": "",
   "license": "ISC",

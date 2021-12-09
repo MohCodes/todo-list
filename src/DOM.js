@@ -453,20 +453,22 @@ const displayingTodos  = (()=>{
                 projectDivs();
         }
         bottomDiv.addEventListener('click',removeProject)
+        
     }
+
 }
 
 const gangang = (obj)=>{
     projects[arrayDataValue]["todo"].push(obj);
     projectDivs();
-    
+    const gang = document.getElementById([`topDiv${arrayDataValue}`])
+    gang.click()
+    console.log(arrayDataValue,gang)
 }
 
     return{projectDivs,gangang}
 })()
 
-
-///////seeeeeet upppp add todo functionality link to newtodo for each project 
 
 
 export{displayingTodos,modals, mainPage}
