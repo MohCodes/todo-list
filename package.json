@@ -3,13 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
-  "homepage":"https://moefarts.github.io/todo-list/",
+  "homepage": "https://moefarts.github.io/todo-list",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
     "build": "webpack",
     "deploy": "gh-pages -d dist -b master"
-
   },
   "repository": {
     "type": "git",
@@ -27,6 +26,7 @@
     "webpack-cli": "^4.9.1"
   },
   "dependencies": {
+    "gh-pages": "^3.2.3",
     "jquery": "^3.6.0",
     "lodash": "^4.17.21"
   }
