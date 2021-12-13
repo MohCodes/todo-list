@@ -1,4 +1,5 @@
 import './style.css'
+import { setData } from '../src/index';
 import { projectObject,todoObject,todoList,projects } from './createTodo';
 const container = document.getElementById('container')
 
@@ -35,6 +36,7 @@ const mainContainerContent = ()=>{
     mainContentTitle.className = "mainContentTitle";
     mainContentTitle.setAttribute('id',"mainContentTitle");
     mainContainerDiv.appendChild(mainContentTitle);
+    mainContentTitle.textContent = "projects"
 
     const mainContent = document.createElement('div');
     mainContent.className = "mainContent";
@@ -253,10 +255,9 @@ const modals  = (()=>{
             let newProjects = new projectObject (projectModalInput.value,projectModalDueDateInput.value,newTodo);
             projects.push(newProjects);
             displayingTodos.projectDivs();
-            // HOW TO ADD TODOS to project objects
-            // const newtodoo = new todoObject ('gang','gang','gang','gang');
-            // newProjects['todo'].push(newtodoo);
             console.log(projects)
+            setData()
+            console.log(localStorage)
             return{newTodo}
  
         })
@@ -279,8 +280,8 @@ return{newProjectModal,projectComponentsPage}
 const displayingTodos  = (()=>{
 
     const projectDivs = ()=>{
-
         const newTodoButton = document.getElementById("newTodo")
+        mainContentTitle.textContent = `Projects`
         newTodoButton.style.display = "none"
         mainContent.innerHTML = "";
         for(let i=0;i<projects.length;i++){
@@ -289,11 +290,13 @@ const displayingTodos  = (()=>{
             temp.id =`project${i}`
             temp.setAttribute("data-value",`${i}`)
             mainContent.appendChild(temp);
+       
 
             //opening object function
             const openProject = (event)=>{
             globalThis.arrayDataValue = event.target.getAttribute('data-value')
             mainContent.innerHTML="";
+            mainContentTitle.textContent = `${projects[arrayDataValue]["projectTitle"]}`
             for(let z = 0;z<projects[arrayDataValue]["todo"].length;z++){
 
             const newTodoButton = document.getElementById("newTodo")
@@ -406,7 +409,7 @@ const displayingTodos  = (()=>{
             const newTodoButton = document.getElementById("newTodo")
             newTodoButton.style.display = ""
                 }
-            
+                setData()
             console.log(projects[arrayDataValue]["todo"])
             }
 
@@ -449,8 +452,10 @@ const displayingTodos  = (()=>{
             const removeProject = (event)=>{
                 const item = event.target.getAttribute('data-value')
                 projects.splice(item,1);
+                setData()
                 console.log(projects)
                 projectDivs();
+
         }
         bottomDiv.addEventListener('click',removeProject)
         
@@ -463,7 +468,7 @@ const gangang = (obj)=>{
     projectDivs();
     const gang = document.getElementById([`topDiv${arrayDataValue}`])
     gang.click()
-    console.log(arrayDataValue,gang)
+    setData()
 }
 
     return{projectDivs,gangang}
