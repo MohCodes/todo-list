@@ -334,14 +334,14 @@ const displayingTodos  = (()=>{
             todoDueDate.id =`todoDueDate${z}`
             todoDueDate.setAttribute("data-value",`${z}`)
             todoTopDiv.appendChild(todoDueDate);
-            todoDueDate.textContent = `Due Date: ${projects[arrayDataValue]["todo"][z]['dueDate']}`
+            todoDueDate.textContent = `Due Date: ${projects[arrayDataValue]["todo"][z]['priority']}`
 
             const todoPriority = document.createElement('div')
             todoPriority.className = `todoPriority`;
             todoPriority.id =`todoPriority${z}`
             todoPriority.setAttribute("data-value",`${z}`)
             todoTopDiv.appendChild(todoPriority);
-            todoPriority.textContent = `Priority: ${projects[arrayDataValue]["todo"][z]['priority']}`
+            todoPriority.textContent = `Priority: ${projects[arrayDataValue]["todo"][z]['dueDate']}`
 
             const todoBotDiv = document.createElement('div')
             todoBotDiv.className = `todoBotDiv`;
